@@ -63,5 +63,5 @@ class DBManipulator:
 
     def delete_flashcard(self, flashcard):
         with self.Session() as session:
-            session.query(Flashcard).filter(Flashcard.question == flashcard.question).delete()
+            session.query(Flashcard).filter(Flashcard.id == flashcard.id).delete()
             session.commit()
